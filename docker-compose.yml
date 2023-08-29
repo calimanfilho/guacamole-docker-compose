@@ -133,7 +133,7 @@ services:
       POSTGRES_USER: guacamole_user
       LDAP_HOSTNAME: ip-10-47-141-230
       LDAP_PORT: 389
-      LDAP_USER_BASE_DN: DC=sa-east-1,DC=compute,DC=internal
+      LDAP_USER_BASE_DN: ou=Department,DC=sa-east-1,DC=compute,DC=internal
     image: guacamole/guacamole
     links:
     - guacd
