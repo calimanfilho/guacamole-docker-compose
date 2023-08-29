@@ -131,14 +131,9 @@ services:
       POSTGRES_HOSTNAME: postgres
       POSTGRES_PASSWORD: 'ChooseYourOwnPasswordHere1234'
       POSTGRES_USER: guacamole_user
-      LDAP-HOSTNAME: ip-10-47-141-230
-      LDAP-PORT: 389
-      LDAP-ENCRYPTION-METHOD: none
-      LDAP-USER-BASE-DN: DC=sa-east-1,DC=compute,DC=internal
-      LDAP-USERNAME-ATTRIBUTE: admin
-      LDAP-SEARCH-BIND-DN: CN=readonly_svc,CN=Users,DC=sa-east-1,DC=compute,DC=internal
-      LDAP-SEARCH-BIND-PASSWORD: DNX1234
-      LDAP-USER-SEARCH-FILTER: (&(objectClass=user)(memberOf:1.2.840.113556.1.4.1941:=CN=GuacamoleUsers,CN=Users,DC=sa-east-1,DC=compute,DC=internal))
+      LDAP_HOSTNAME: ip-10-47-141-230
+      LDAP_PORT: 389
+      LDAP_USER_BASE_DN: DC=sa-east-1,DC=compute,DC=internal
     image: guacamole/guacamole
     links:
     - guacd
